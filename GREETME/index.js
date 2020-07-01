@@ -18,12 +18,12 @@ exports.handler = async (event) => {
     let message = `${greeting[lang] ? greeting[lang] : greeting['en']} ${name}`;
     let response = {
         message: message,
-        ingo: info,
+        info: info,
         timestamp: moment().unix()
     };
 
     return {
         statusCode: 200,
-        bosy: response
+        body: response
     };
 };
