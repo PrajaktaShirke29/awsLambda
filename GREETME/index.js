@@ -24,6 +24,10 @@ exports.handler = async (event) => {
 
     return {
         statusCode: 200,
+        // This is used to enable CORS if method is Proxy
+        headers: {
+            "Access-Control-Allow-Origin": "*"
+        },
         body: JSON.stringify(response);
     };
 };
