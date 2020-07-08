@@ -1,0 +1,24 @@
+{
+    "UserPoolId": "us-east-2_Qckz3z2OD",
+    "ClientId": "730ptpj67s5k4028avs8gpdgrk",
+    "AuthFlow": "USER_PASSWORD_AUTH",
+    "AuthParameters": {
+        "USERNAME": "prajakta",
+        "PASSWORD": "password"
+    }
+}
+// remove  comment before execution
+// Sign up User
+// aws cognito-idp sign-up --client-id 730ptpj67s5k4028avs8gpdgrk --username prajakta --password password
+
+// Confirm user by admin
+// aws cognito-idp admin-confirm-sign-up --user-pool-id us-east-2_Qckz3z2OD --userprajakta
+
+// generate skeleton
+// aws cognito-idp admin-initiate-auth --generate-cli-skeleton
+
+// generate token with file
+// aws cognito-idp admin-initiate-auth --cli-input-json file://creds.json
+
+// generate token with command
+// aws cognito-idp initiate-auth --auth-flow USER_PASSWORD_AUTH --client-id 730ptpj67s5k4028avs8gpdgrk --auth-parameters USERNAME="prajakta",PASSWORD="password"
